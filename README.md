@@ -39,3 +39,25 @@ MCU란 마이크로프로세서와 입출력 모듈을 하나의 칩으로 만�
 DC모터 2개 또는 스테핑 모터를 연결하여 제어가 가능하며, 입력 전압은 12V 또는 5V로 사용할 수 있고 그 사이에 GND 핀이 위치해 있다.
 모터 제어시 전류가 사용되는데 우리가 사용하는 아두이노 우노 보드에서 출력하는 전류는 모터에서 필요한 전류보다 낮아 드라이버 모듈 없이 구동할 시 보드가 파손될 수 있다. 
 L298N에는 모터A와 B를 출력하는 OUT핀이 있으며 enA, enB 핀을 통하여 모터 속력을 조정하고 Input 핀을 통해 모터의 방향을 조절한다.
+
+![L298N motor driver Operating Method](images/L298NmotorOperatingMethod.jpg)
+In1과 In2의 입력에 따라 모터의 회전 방향이 달라진다.
+
+
+### Fritzing Schematic
+
+![schematic](images/fritzing schematic.jpg)
+
+L298N motor driver에 dc모터 2개를 연결하고 3개의 적외선 센서와 아두이노 우노 보드를 연결하여 RC카 회로를 구성했다.
+
+
+### Arduino Sketch Source Code
+
+[code link](https://github.com/seocord/Line-Traker-car-with-Arduino/blob/3a9c3d84825abf4c173943f96f671d8ec4ae6197/lineTrakerRCcar.ino)
+
+
+### Result
+
+![result video](CED-5조-project1-linetracer-테스트영상.gif)
+
+15.93s 소요
